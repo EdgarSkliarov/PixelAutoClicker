@@ -2,7 +2,7 @@ import java.awt.*;
 import java.awt.Robot;
 import java.awt.event.InputEvent;
 
-public class App {
+public class Clicker {
     public static void main(String[] args) throws AWTException {
 
         Robot robot = new Robot();
