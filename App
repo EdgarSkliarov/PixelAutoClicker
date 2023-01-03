@@ -1,0 +1,37 @@
+import java.awt.*;
+import java.awt.Robot;
+import java.awt.event.InputEvent;
+
+public class App {
+    public static void main(String[] args) throws AWTException {
+
+        Robot robot = new Robot();
+
+        
+        int[][] locations = {{900, 930}, {975, 775}, {825, 550}, {900, 930}};
+
+       
+
+        while (true) {
+            for (int[] location : locations) {
+                wait(2500);
+                robot.mouseMove(location[0], location[1]);
+
+                // Click at the current location
+                robot.mousePress(InputEvent.BUTTON3_MASK);
+                robot.mouseRelease(InputEvent.BUTTON3_MASK);
+                robot.mousePress(InputEvent.BUTTON1_MASK);
+                robot.mouseRelease(InputEvent.BUTTON1_MASK);
+            }
+        }
+    }
+
+    public static void wait( int x ) {
+        try {
+            Thread.sleep( x );
+        }
+        catch ( InterruptedException i){
+            i.printStackTrace();
+        }
+       }
+}
