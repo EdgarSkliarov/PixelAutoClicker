@@ -6,11 +6,8 @@ public class Clicker {
     public static void main(String[] args) throws AWTException {
 
         Robot robot = new Robot();
-
         
-        int[][] locations = {{900, 930}, {975, 775}, {825, 550}, {900, 930}};
-
-       
+        int[][] locations = {{900, 930}, {975, 775}, {825, 550}, {900, 930}};  
 
         while (true) {
             for (int[] location : locations) {
